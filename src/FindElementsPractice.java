@@ -12,16 +12,21 @@ public class FindElementsPractice {
 
         WebDriver driver = new ChromeDriver();
 
-        driver.get("https://amazon.com");
+        driver.get("https://spicejet.com");
 //        driver.navigate().to("https://fb.me");
 //        driver.navigate().back();
 
 
-        List<WebElement> footerSites = driver.findElements(By.xpath("//td[@class='navFooterDescItem']"));
+//        List<WebElement> footerSites = driver.findElements(By.xpath("//td[@class='navFooterDescItem']"));
+//
+//        for (WebElement site : footerSites) {
+//            System.out.println(site.getText());
+//        }
 
-        for (WebElement site : footerSites) {
-            System.out.println(site.getText());
-        }
+        System.out.println(driver.findElement(By.xpath("//*[@id='ctl00_mainContent_view_date2']")).isDisplayed());
+        System.out.println("YUY");
+        driver.manage().window().fullscreen();
+
 
     }
 }
