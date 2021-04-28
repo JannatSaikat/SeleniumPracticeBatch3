@@ -1,5 +1,6 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -16,9 +17,9 @@ public class ImplicitWaitPractice {
         driver.get("http://etsy.com");
 
         driver.findElement(By.xpath("//button[@class='wt-btn wt-btn--small wt-btn--transparent wt-mr-xs-1 inline-overlay-trigger signin-header-action select-signin']")).click();
-        Thread.sleep(10000);
-
+        WebElement eu = driver.findElement(By.xpath("//input[@name='email']"));
         driver.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS );
+//        driver.manage().timeouts().implicitlyWait();
 
         driver.findElement(By.xpath("//input[@name='email']")).sendKeys("email@gmail.com");
         driver.findElement(By.xpath("//input[@name='password']")).sendKeys("password123");

@@ -19,7 +19,7 @@ public class MacysSync {
         driver.manage().timeouts().implicitlyWait(20000, TimeUnit.MILLISECONDS);
 //        WebDriverWait wait = new WebDriverWait(driver, 20);
 //        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//*[@id=\"footer-redesign-row-1-panels-container\"]/div[3]/label/ul/li[2]/a"))));
-
+//https://demoqa.com/browser-windows
 
         driver.findElement(By.xpath("//*[@id=\"footer-redesign-row-1-panels-container\"]/div[3]/label/ul/li[2]/a")).click();
     }
